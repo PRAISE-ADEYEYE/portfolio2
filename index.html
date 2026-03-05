@@ -55,101 +55,30 @@ nav {
   backdrop-filter:blur(24px);
   border-bottom:1px solid var(--border);
 }
-.nav-logo {
-  font-family:var(--display);
-  font-size:clamp(1.1rem,2vw,1.45rem);
-  font-weight:700;
-  letter-spacing:.06em;
-  color:var(--white);
-}
+.nav-logo { font-family:var(--display);font-size:clamp(1.1rem,2vw,1.45rem);font-weight:700;letter-spacing:.06em;color:var(--white); }
 .nav-logo em { font-style:italic;color:var(--gold); }
 .nav-links { display:flex;gap:clamp(.8rem,2vw,2.2rem);list-style:none; }
-.nav-links a {
-  font-family:var(--mono);font-size:.62rem;
-  letter-spacing:.14em;text-transform:uppercase;
-  color:var(--off);text-decoration:none;font-weight:500;
-  transition:color .2s;
-}
+.nav-links a { font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--off);text-decoration:none;font-weight:500;transition:color .2s; }
 .nav-links a:hover { color:var(--gold); }
-.nav-badge {
-  font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;
-  color:var(--gold);border:1px solid var(--border-h);padding:.32rem .8rem;
-  white-space:nowrap;font-weight:500;
-}
+.nav-badge { font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;color:var(--gold);border:1px solid var(--border-h);padding:.32rem .8rem;white-space:nowrap;font-weight:500; }
 @media(max-width:768px){ .nav-links,.nav-badge{display:none;} }
 
 /* ── HERO ── */
-.hero {
-  min-height:100svh;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  padding-top:4rem;
-  position:relative;overflow:hidden;
-}
+.hero { min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:4rem;position:relative;overflow:hidden; }
 @media(max-width:900px){ .hero{grid-template-columns:1fr;grid-template-rows:auto 52svh;} }
+.hero::before { content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.05) 1px,transparent 1px);background-size:50px 50px;pointer-events:none; }
 
-.hero::before {
-  content:'';position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(201,168,76,.05) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(201,168,76,.05) 1px,transparent 1px);
-  background-size:50px 50px;pointer-events:none;
-}
-
-.hero-left {
-  display:flex;flex-direction:column;justify-content:center;
-  padding:clamp(2rem,5vw,5rem) clamp(1.5rem,4vw,4rem);
-  position:relative;z-index:2;
-}
-.eyebrow {
-  font-family:var(--mono);font-size:.65rem;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--gold);font-weight:500;
-  display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem;
-}
+.hero-left { display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,5vw,5rem) clamp(1.5rem,4vw,4rem);position:relative;z-index:2; }
+.eyebrow { font-family:var(--mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem; }
 .eyebrow::before { content:'';width:2.5rem;height:1px;background:var(--gold); }
-
-.hero-name {
-  font-family:var(--display);
-  font-size:clamp(3.4rem,7.5vw,7.5rem);
-  font-weight:700;line-height:.9;letter-spacing:-.01em;
-  color:var(--white);
-}
-.hero-name .sn {
-  display:block;font-style:italic;
-  color:var(--gold-lt);
-  font-size:clamp(3rem,7vw,7rem);
-}
-
-.rule {
-  width:100%;height:1px;
-  background:linear-gradient(to right,var(--gold),transparent);
-  margin:1.6rem 0;opacity:.5;
-}
-
-.hero-sub {
-  font-family:var(--mono);
-  font-size:clamp(.64rem,.88vw,.8rem);
-  letter-spacing:.2em;text-transform:uppercase;
-  color:var(--off);font-weight:500;margin-bottom:1.6rem;
-}
-
-.hero-bio {
-  font-family:var(--sans);font-size:clamp(1rem,1.3vw,1.12rem);
-  font-weight:600;line-height:1.8;color:var(--off);
-  max-width:460px;margin-bottom:2.8rem;
-}
-
+.hero-name { font-family:var(--display);font-size:clamp(3.4rem,7.5vw,7.5rem);font-weight:700;line-height:.9;letter-spacing:-.01em;color:var(--white); }
+.hero-name .sn { display:block;font-style:italic;color:var(--gold-lt);font-size:clamp(3rem,7vw,7rem); }
+.rule { width:100%;height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:1.6rem 0;opacity:.5; }
+.hero-sub { font-family:var(--mono);font-size:clamp(.64rem,.88vw,.8rem);letter-spacing:.2em;text-transform:uppercase;color:var(--off);font-weight:500;margin-bottom:1.6rem; }
+.hero-bio { font-family:var(--sans);font-size:clamp(1rem,1.3vw,1.12rem);font-weight:600;line-height:1.8;color:var(--off);max-width:460px;margin-bottom:2.8rem; }
 .cta-row { display:flex;gap:1rem;flex-wrap:wrap; }
-.btn {
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;
-  text-transform:uppercase;text-decoration:none;
-  padding:.9rem 2rem;cursor:none;transition:all .22s;
-  display:inline-block;font-weight:500;
-}
-.btn-g {
-  background:var(--gold);color:var(--navy);font-weight:700;
-  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
-}
+.btn { font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:.9rem 2rem;cursor:none;transition:all .22s;display:inline-block;font-weight:500; }
+.btn-g { background:var(--gold);color:var(--navy);font-weight:700;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
 .btn-g:hover { background:var(--gold-lt);transform:translateY(-2px); }
 .btn-o { border:1px solid var(--border-h);color:var(--white); }
 .btn-o:hover { border-color:var(--gold);color:var(--gold); }
@@ -157,306 +86,130 @@ nav {
 /* ── HERO CANVAS ── */
 .hero-right { position:relative;min-height:0; }
 #hero-canvas { display:block;width:100%;height:100%; }
-.canvas-tag {
-  position:absolute;bottom:1.4rem;right:1.4rem;
-  font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold);opacity:.7;
-  display:flex;align-items:center;gap:.4rem;font-weight:500;
-}
+.canvas-tag { position:absolute;bottom:1.4rem;right:1.4rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);opacity:.7;display:flex;align-items:center;gap:.4rem;font-weight:500; }
 .canvas-tag::before { content:'';width:.8rem;height:1px;background:var(--gold); }
-.drag-hint {
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;
-  text-transform:uppercase;color:rgba(201,168,76,.6);
-  pointer-events:none;animation:fh 3.5s ease forwards;font-weight:500;
-}
+.drag-hint { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,168,76,.6);pointer-events:none;animation:fh 3.5s ease forwards;font-weight:500; }
 @keyframes fh{0%,60%{opacity:1}100%{opacity:0}}
 
 /* ── SECTION ── */
 .sec { padding:clamp(4rem,7vw,7rem) clamp(1rem,5vw,4rem); }
 .sec-alt { background:var(--navy-mid); }
-
-.sec-head {
-  display:flex;align-items:center;gap:1.5rem;
-  margin-bottom:clamp(2.5rem,5vw,4.5rem);
-}
-.sec-lbl {
-  font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--gold);white-space:nowrap;font-weight:500;
-}
-.sec-ttl {
-  font-family:var(--display);
-  font-size:clamp(2rem,4.5vw,3.8rem);
-  font-weight:700;letter-spacing:.03em;
-  color:var(--white);white-space:nowrap;
-}
+.sec-head { display:flex;align-items:center;gap:1.5rem;margin-bottom:clamp(2.5rem,5vw,4.5rem); }
+.sec-lbl { font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);white-space:nowrap;font-weight:500; }
+.sec-ttl { font-family:var(--display);font-size:clamp(2rem,4.5vw,3.8rem);font-weight:700;letter-spacing:.03em;color:var(--white);white-space:nowrap; }
 .sec-ttl em { font-style:italic;color:var(--gold-lt); }
 .sec-rule { flex:1;height:1px;background:linear-gradient(to right,var(--border-h),transparent); }
 
 /* ── ABOUT ── */
-.about-grid {
-  display:grid;grid-template-columns:1.3fr 1fr;
-  gap:clamp(2rem,5vw,5rem);align-items:start;
-}
+.about-grid { display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:start; }
 @media(max-width:820px){ .about-grid{grid-template-columns:1fr;} }
-
-.about-text p {
-  font-family:var(--sans);font-size:clamp(1rem,1.2vw,1.08rem);
-  font-weight:600;line-height:1.9;color:var(--off);margin-bottom:1.3rem;
-}
+.about-text p { font-family:var(--sans);font-size:clamp(1rem,1.2vw,1.08rem);font-weight:600;line-height:1.9;color:var(--off);margin-bottom:1.3rem; }
 .about-text p strong { color:var(--white);font-weight:700; }
-
 .info-list { display:flex;flex-direction:column;gap:.6rem; }
-.info-row {
-  display:grid;grid-template-columns:90px 1fr;align-items:center;
-  gap:1rem;padding:.9rem 1.1rem;
-  border:1px solid var(--border);background:var(--faint);
-  transition:border-color .25s;
-}
+.info-row { display:grid;grid-template-columns:90px 1fr;align-items:center;gap:1rem;padding:.9rem 1.1rem;border:1px solid var(--border);background:var(--faint);transition:border-color .25s; }
 .info-row:hover { border-color:var(--border-h); }
-.info-k {
-  font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gold);font-weight:500;
-}
+.info-k { font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500; }
 .info-v { font-family:var(--sans);font-size:.92rem;font-weight:700;color:var(--white); }
 
 /* ── SKILLS ── */
-.skills-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
-  gap:1.1rem;
-}
-.sk-card {
-  border:1px solid var(--border);background:var(--navy-card);
-  padding:1.5rem;position:relative;overflow:hidden;
-  transition:border-color .25s,transform .25s;
-}
-.sk-card::before {
-  content:'';position:absolute;top:0;left:0;
-  width:100%;height:2px;
-  background:linear-gradient(to right,var(--gold),transparent);
-  transform:scaleX(0);transform-origin:left;transition:transform .3s;
-}
+.skills-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1.1rem; }
+.sk-card { border:1px solid var(--border);background:var(--navy-card);padding:1.5rem;position:relative;overflow:hidden;transition:border-color .25s,transform .25s; }
+.sk-card::before { content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(to right,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .3s; }
 .sk-card:hover { border-color:var(--border-h);transform:translateY(-3px); }
 .sk-card:hover::before { transform:scaleX(1); }
-.sk-title {
-  font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--gold);
-  margin-bottom:1.1rem;font-weight:500;
-}
+.sk-title { font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;font-weight:500; }
 .pills { display:flex;flex-wrap:wrap;gap:.45rem; }
-.pill {
-  font-family:var(--sans);font-size:.78rem;font-weight:700;
-  letter-spacing:.04em;padding:.35rem .75rem;
-  border:1px solid var(--border);color:var(--off);
-  transition:all .2s;
-}
+.pill { font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.04em;padding:.35rem .75rem;border:1px solid var(--border);color:var(--off);transition:all .2s; }
 .pill:hover { border-color:var(--gold);color:var(--gold-lt); }
 
 /* ── PROJECTS ── */
-.proj-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
-  gap:1.5rem;
-}
-.proj-card {
-  border:1px solid var(--border);background:var(--navy-card);
-  overflow:hidden;transition:border-color .28s,transform .3s;cursor:none;
-}
+.proj-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.5rem; }
+.proj-card { border:1px solid var(--border);background:var(--navy-card);overflow:hidden;transition:border-color .28s,transform .3s;cursor:none; }
 .proj-card:hover { border-color:var(--border-h);transform:translateY(-5px); }
 
-.proj-viewer {
-  width:100%;height:clamp(240px,28vw,320px);
-  position:relative;background:var(--navy);overflow:hidden;
-}
+.proj-viewer { width:100%;height:clamp(240px,28vw,320px);position:relative;background:var(--navy);overflow:hidden; }
 .proj-viewer canvas { display:block;width:100%!important;height:100%!important; }
 
-/* loading spinner */
-.v-loader {
-  position:absolute;inset:0;display:flex;flex-direction:column;
+/* ── LAZY PLACEHOLDER ── */
+.v-placeholder {
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:.8rem;
-  background:var(--navy);transition:opacity .5s;
+  background:var(--navy);
+  cursor:pointer;
+  transition:background .3s;
 }
-.v-loader.hide { opacity:0;pointer-events:none; }
-.spinner {
-  width:28px;height:28px;
-  border:2px solid var(--border);
-  border-top-color:var(--gold);
+.v-placeholder:hover { background:#0a1525; }
+.v-placeholder-icon {
+  width:52px;height:52px;
+  border:1px solid var(--border-h);
   border-radius:50%;
-  animation:spin .8s linear infinite;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;color:var(--gold);
+  transition:transform .3s, border-color .3s;
 }
-@keyframes spin{to{transform:rotate(360deg)}}
-.v-loader span {
+.v-placeholder:hover .v-placeholder-icon { transform:scale(1.1);border-color:var(--gold); }
+.v-placeholder span {
   font-family:var(--mono);font-size:.55rem;
   letter-spacing:.2em;text-transform:uppercase;
   color:var(--gold);font-weight:500;
 }
 
-.v-top {
-  position:absolute;top:0;left:0;right:0;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:.65rem .9rem;
-  background:linear-gradient(to bottom,rgba(6,12,24,.8),transparent);
-  pointer-events:none;z-index:2;
-}
-.v-badge {
-  font-family:var(--mono);font-size:.52rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold);
-  border:1px solid rgba(201,168,76,.4);padding:.22rem .52rem;
-  font-weight:500;
-}
-.v-hint {
-  font-family:var(--mono);font-size:.5rem;letter-spacing:.14em;
-  color:var(--off);font-weight:500;
-}
+/* loading spinner */
+.v-loader { position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;background:var(--navy);transition:opacity .5s; }
+.v-loader.hide { opacity:0;pointer-events:none; }
+.spinner { width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite; }
+@keyframes spin{to{transform:rotate(360deg)}}
+.v-loader span { font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500; }
+
+.v-top { position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:.65rem .9rem;background:linear-gradient(to bottom,rgba(6,12,24,.8),transparent);pointer-events:none;z-index:2; }
+.v-badge { font-family:var(--mono);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:.22rem .52rem;font-weight:500; }
+.v-hint { font-family:var(--mono);font-size:.5rem;letter-spacing:.14em;color:var(--off);font-weight:500; }
 .v-btns { position:absolute;bottom:.65rem;right:.65rem;display:flex;gap:.35rem;z-index:2; }
-.v-btn {
-  width:26px;height:26px;
-  background:rgba(201,168,76,.1);
-  border:1px solid rgba(201,168,76,.35);
-  color:var(--gold);font-size:.7rem;
-  display:flex;align-items:center;justify-content:center;
-  cursor:none;transition:background .2s;
-}
+.v-btn { width:26px;height:26px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:.7rem;display:flex;align-items:center;justify-content:center;cursor:none;transition:background .2s; }
 .v-btn:hover { background:rgba(201,168,76,.28); }
 
 .proj-body { padding:1.4rem; }
-.proj-name {
-  font-family:var(--display);
-  font-size:clamp(1.5rem,2.5vw,2rem);
-  font-weight:700;letter-spacing:.04em;
-  color:var(--gold-lt);margin-bottom:.8rem;
-}
+.proj-name { font-family:var(--display);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;letter-spacing:.04em;color:var(--gold-lt);margin-bottom:.8rem; }
 .proj-pills { display:flex;flex-wrap:wrap;gap:.4rem; }
-.proj-pill {
-  font-family:var(--sans);font-size:.72rem;font-weight:700;
-  letter-spacing:.06em;padding:.28rem .6rem;
-  border:1px solid var(--border);color:var(--off);
-}
+.proj-pill { font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:.28rem .6rem;border:1px solid var(--border);color:var(--off); }
 
 /* ── EXPERIENCE ── */
 .exp-list { display:flex;flex-direction:column; }
-.exp-item {
-  display:grid;
-  grid-template-columns:clamp(140px,22vw,220px) 1fr;
-  gap:clamp(.8rem,3vw,3rem);
-  padding:clamp(1.4rem,2.5vw,2.2rem) 0;
-  border-top:1px solid var(--border);
-  transition:background .2s;
-}
+.exp-item { display:grid;grid-template-columns:clamp(140px,22vw,220px) 1fr;gap:clamp(.8rem,3vw,3rem);padding:clamp(1.4rem,2.5vw,2.2rem) 0;border-top:1px solid var(--border);transition:background .2s; }
 .exp-item:hover { background:rgba(255,255,255,.03); }
 @media(max-width:600px){ .exp-item{grid-template-columns:1fr;gap:.5rem;} }
-
-.exp-role {
-  font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gold);
-  margin-bottom:.35rem;font-weight:500;
-}
-.exp-org {
-  font-family:var(--display);
-  font-size:clamp(1.05rem,2vw,1.45rem);
-  font-weight:700;line-height:1.2;color:var(--white);
-}
-.exp-period {
-  display:inline-block;font-family:var(--mono);font-size:.52rem;
-  letter-spacing:.14em;text-transform:uppercase;
-  color:var(--off);border:1px solid var(--border);
-  padding:.2rem .52rem;margin-bottom:.65rem;font-weight:500;
-}
-.exp-desc {
-  font-family:var(--sans);font-size:clamp(.88rem,1.1vw,.98rem);
-  font-weight:600;line-height:1.82;color:var(--dim);
-}
+.exp-role { font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;font-weight:500; }
+.exp-org { font-family:var(--display);font-size:clamp(1.05rem,2vw,1.45rem);font-weight:700;line-height:1.2;color:var(--white); }
+.exp-period { display:inline-block;font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--off);border:1px solid var(--border);padding:.2rem .52rem;margin-bottom:.65rem;font-weight:500; }
+.exp-desc { font-family:var(--sans);font-size:clamp(.88rem,1.1vw,.98rem);font-weight:600;line-height:1.82;color:var(--dim); }
 
 /* ── CERTS ── */
-.certs-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
-  gap:1.1rem;
-}
-.cert-card {
-  border:1px solid var(--border);background:var(--navy-card);
-  padding:1.4rem;position:relative;transition:border-color .25s;
-}
+.certs-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1.1rem; }
+.cert-card { border:1px solid var(--border);background:var(--navy-card);padding:1.4rem;position:relative;transition:border-color .25s; }
 .cert-card:hover { border-color:var(--border-h); }
-.cert-mark {
-  width:26px;height:26px;border:1px solid rgba(201,168,76,.45);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.7rem;color:var(--gold);margin-bottom:.9rem;
-}
-.cert-issuer {
-  font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold);
-  margin-bottom:.5rem;font-weight:500;
-}
-.cert-name {
-  font-family:var(--sans);font-size:clamp(.9rem,1.1vw,1rem);
-  font-weight:700;line-height:1.55;color:var(--white);
-  margin-bottom:.45rem;
-}
-.cert-date {
-  font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;
-  color:var(--dim);font-weight:500;
-}
+.cert-mark { width:26px;height:26px;border:1px solid rgba(201,168,76,.45);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gold);margin-bottom:.9rem; }
+.cert-issuer { font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;font-weight:500; }
+.cert-name { font-family:var(--sans);font-size:clamp(.9rem,1.1vw,1rem);font-weight:700;line-height:1.55;color:var(--white);margin-bottom:.45rem; }
+.cert-date { font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;color:var(--dim);font-weight:500; }
 
 /* ── CONTACT ── */
-.contact-sec {
-  min-height:55svh;
-  display:flex;flex-direction:column;
-  justify-content:center;align-items:center;
-  text-align:center;position:relative;overflow:hidden;
-  padding:clamp(4rem,7vw,7rem) clamp(1rem,5vw,4rem);
-}
-.contact-wm {
-  position:absolute;inset:0;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--display);
-  font-size:clamp(6rem,16vw,18rem);
-  font-weight:700;color:rgba(201,168,76,.04);
-  letter-spacing:.08em;pointer-events:none;user-select:none;
-}
-.c-eyebrow {
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--gold);
-  margin-bottom:1.4rem;position:relative;z-index:1;font-weight:500;
-}
-.c-head {
-  font-family:var(--display);
-  font-size:clamp(2rem,5.5vw,4.8rem);
-  font-weight:700;line-height:1.1;
-  color:var(--white);margin-bottom:2.5rem;
-  position:relative;z-index:1;
-}
+.contact-sec { min-height:55svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:clamp(4rem,7vw,7rem) clamp(1rem,5vw,4rem); }
+.contact-wm { position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:clamp(6rem,16vw,18rem);font-weight:700;color:rgba(201,168,76,.04);letter-spacing:.08em;pointer-events:none;user-select:none; }
+.c-eyebrow { font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;position:relative;z-index:1;font-weight:500; }
+.c-head { font-family:var(--display);font-size:clamp(2rem,5.5vw,4.8rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:2.5rem;position:relative;z-index:1; }
 .c-head em { color:var(--gold-lt);font-style:italic; }
-.c-links {
-  display:flex;gap:.9rem;flex-wrap:wrap;
-  justify-content:center;position:relative;z-index:1;
-}
-.c-lnk {
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;
-  text-transform:uppercase;padding:.9rem 1.8rem;
-  text-decoration:none;cursor:none;transition:all .22s;font-weight:500;
-}
+.c-links { display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1; }
+.c-lnk { font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 1.8rem;text-decoration:none;cursor:none;transition:all .22s;font-weight:500; }
 .c-lnk-p { background:var(--gold);color:var(--navy);font-weight:700; }
 .c-lnk-p:hover { background:var(--gold-lt);transform:translateY(-2px); }
 .c-lnk-o { border:1px solid var(--border-h);color:var(--white); }
 .c-lnk-o:hover { border-color:var(--gold);color:var(--gold); }
 
 /* ── FOOTER ── */
-footer {
-  padding:1.4rem clamp(1rem,5vw,4rem);
-  border-top:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:.8rem;
-}
-.foot-logo {
-  font-family:var(--display);font-size:1rem;font-weight:700;
-  letter-spacing:.06em;color:var(--dim);
-}
-.foot-copy {
-  font-family:var(--mono);font-size:.54rem;letter-spacing:.12em;
-  color:rgba(232,228,218,.35);font-weight:500;
-}
+footer { padding:1.4rem clamp(1rem,5vw,4rem);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem; }
+.foot-logo { font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:.06em;color:var(--dim); }
+.foot-copy { font-family:var(--mono);font-size:.54rem;letter-spacing:.12em;color:rgba(232,228,218,.35);font-weight:500; }
 
 /* ── REVEAL ── */
 .reveal { opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease; }
@@ -484,6 +237,7 @@ footer {
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <div class="nav-badge">Mechanical Engineering · 400L</div>
 </nav>
 
 <!-- HERO -->
@@ -556,12 +310,14 @@ footer {
   </div>
   <div class="proj-grid">
 
-    <!-- 1: Tesla Bot -->
+    <!-- Each card uses data-glb for lazy loading — click the placeholder to load the 3D model -->
+
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v1">
-        <div class="v-loader" id="l1"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(1)">⟳</button><button class="v-btn" id="ar1" onclick="togAR(1)">▶</button></div>
+      <div class="proj-viewer" id="v1" data-glb="models/Tesla bot.glb" data-loader="l1">
+        <div class="v-placeholder" onclick="initViewer(1)"><div class="v-placeholder-icon">⬡</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l1" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(1)">⟳</button><button class="v-btn" id="ar1" onclick="togAR(1)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">Tesla Bot</div>
@@ -569,12 +325,12 @@ footer {
       </div>
     </div>
 
-    <!-- 2: UAV -->
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v2">
-        <div class="v-loader" id="l2"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(2)">⟳</button><button class="v-btn" id="ar2" onclick="togAR(2)">▶</button></div>
+      <div class="proj-viewer" id="v2" data-glb="models/UAV.glb" data-loader="l2">
+        <div class="v-placeholder" onclick="initViewer(2)"><div class="v-placeholder-icon">✈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l2" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(2)">⟳</button><button class="v-btn" id="ar2" onclick="togAR(2)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">UAV</div>
@@ -582,12 +338,12 @@ footer {
       </div>
     </div>
 
-    <!-- 3: Robotic Sweeper -->
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v3">
-        <div class="v-loader" id="l3"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(3)">⟳</button><button class="v-btn" id="ar3" onclick="togAR(3)">▶</button></div>
+      <div class="proj-viewer" id="v3" data-glb="models/Robotic sweeper.glb" data-loader="l3">
+        <div class="v-placeholder" onclick="initViewer(3)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l3" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(3)">⟳</button><button class="v-btn" id="ar3" onclick="togAR(3)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">Robotic Sweeper</div>
@@ -595,12 +351,12 @@ footer {
       </div>
     </div>
 
-    <!-- 4: Hoverboard -->
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v4">
-        <div class="v-loader" id="l4"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(4)">⟳</button><button class="v-btn" id="ar4" onclick="togAR(4)">▶</button></div>
+      <div class="proj-viewer" id="v4" data-glb="models/Hoverboard.glb" data-loader="l4">
+        <div class="v-placeholder" onclick="initViewer(4)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l4" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(4)">⟳</button><button class="v-btn" id="ar4" onclick="togAR(4)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">Hoverboard</div>
@@ -608,12 +364,12 @@ footer {
       </div>
     </div>
 
-    <!-- 5: Race Car Chassis -->
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v5">
-        <div class="v-loader" id="l5"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(5)">⟳</button><button class="v-btn" id="ar5" onclick="togAR(5)">▶</button></div>
+      <div class="proj-viewer" id="v5" data-glb="models/Race Car chassis.glb" data-loader="l5">
+        <div class="v-placeholder" onclick="initViewer(5)"><div class="v-placeholder-icon">⬟</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l5" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(5)">⟳</button><button class="v-btn" id="ar5" onclick="togAR(5)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">Race Car Chassis</div>
@@ -621,16 +377,278 @@ footer {
       </div>
     </div>
 
-    <!-- 6: Mouse Circuit -->
     <div class="proj-card reveal">
-      <div class="proj-viewer" id="v6">
-        <div class="v-loader" id="l6"><div class="spinner"></div><span>Loading Model</span></div>
-        <div class="v-top"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
-        <div class="v-btns"><button class="v-btn" onclick="resetV(6)">⟳</button><button class="v-btn" id="ar6" onclick="togAR(6)">▶</button></div>
+      <div class="proj-viewer" id="v6" data-glb="models/Mouse circuit.glb" data-loader="l6">
+        <div class="v-placeholder" onclick="initViewer(6)"><div class="v-placeholder-icon">⬡</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l6" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(6)">⟳</button><button class="v-btn" id="ar6" onclick="togAR(6)">▶</button></div>
       </div>
       <div class="proj-body">
         <div class="proj-name">Mouse Circuit</div>
         <div class="proj-pills"><span class="proj-pill">Fusion 360</span><span class="proj-pill">Electronics</span><span class="proj-pill">PCB Design</span></div>
+      </div>
+    </div>
+
+    <!-- ── NEW DESIGNS (convert STEP → GLB and upload to models/) ── -->
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v7" data-glb="models/Atlas torso.glb" data-loader="l7">
+        <div class="v-placeholder" onclick="initViewer(7)"><div class="v-placeholder-icon">⬡</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l7" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(7)">⟳</button><button class="v-btn" id="ar7" onclick="togAR(7)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">ATLAS Torso</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Humanoid</span><span class="proj-pill">Structural Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v8" data-glb="models/Bionic Arm 3.0.glb" data-loader="l8">
+        <div class="v-placeholder" onclick="initViewer(8)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l8" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(8)">⟳</button><button class="v-btn" id="ar8" onclick="togAR(8)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Bionic Arm 3.0</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Prosthetics</span><span class="proj-pill">Robotics</span><span class="proj-pill">Biomechanics</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v9" data-glb="models/Bionic Arm.glb" data-loader="l9">
+        <div class="v-placeholder" onclick="initViewer(9)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l9" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(9)">⟳</button><button class="v-btn" id="ar9" onclick="togAR(9)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Bionic Arm</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Prosthetics</span><span class="proj-pill">DOF Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v10" data-glb="models/Ant Robot.glb" data-loader="l10">
+        <div class="v-placeholder" onclick="initViewer(10)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l10" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(10)">⟳</button><button class="v-btn" id="ar10" onclick="togAR(10)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Ant Robot</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Legged Robot</span><span class="proj-pill">Servo Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v11" data-glb="models/Spiderbot renewed.glb" data-loader="l11">
+        <div class="v-placeholder" onclick="initViewer(11)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l11" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(11)">⟳</button><button class="v-btn" id="ar11" onclick="togAR(11)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">SpiderBot Renewed</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Quadruped</span><span class="proj-pill">Legged Robotics</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v12" data-glb="models/Spidernaut by NASA.glb" data-loader="l12">
+        <div class="v-placeholder" onclick="initViewer(12)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l12" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(12)">⟳</button><button class="v-btn" id="ar12" onclick="togAR(12)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Spidernaut by NASA</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Space Robotics</span><span class="proj-pill">NASA Concept</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v13" data-glb="models/Agility Robotics.glb" data-loader="l13">
+        <div class="v-placeholder" onclick="initViewer(13)"><div class="v-placeholder-icon">⬡</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l13" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(13)">⟳</button><button class="v-btn" id="ar13" onclick="togAR(13)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Agility Robotics</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Bipedal</span><span class="proj-pill">Locomotion</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v14" data-glb="models/Apple Vision Pro.glb" data-loader="l14">
+        <div class="v-placeholder" onclick="initViewer(14)"><div class="v-placeholder-icon">⬟</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l14" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(14)">⟳</button><button class="v-btn" id="ar14" onclick="togAR(14)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Apple Vision Pro</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Consumer Tech</span><span class="proj-pill">Product Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v15" data-glb="models/Gear box.glb" data-loader="l15">
+        <div class="v-placeholder" onclick="initViewer(15)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l15" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(15)">⟳</button><button class="v-btn" id="ar15" onclick="togAR(15)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Gear Box</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Power Transmission</span><span class="proj-pill">Mechanisms</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v16" data-glb="models/Differential gear.glb" data-loader="l16">
+        <div class="v-placeholder" onclick="initViewer(16)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l16" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(16)">⟳</button><button class="v-btn" id="ar16" onclick="togAR(16)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Differential Gear</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Automotive</span><span class="proj-pill">Mechanisms</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v17" data-glb="models/Spherical robot.glb" data-loader="l17">
+        <div class="v-placeholder" onclick="initViewer(17)"><div class="v-placeholder-icon">◉</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l17" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(17)">⟳</button><button class="v-btn" id="ar17" onclick="togAR(17)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Spherical Robot</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Robotics</span><span class="proj-pill">Spherical Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v18" data-glb="models/Spherical and monopole gear.glb" data-loader="l18">
+        <div class="v-placeholder" onclick="initViewer(18)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l18" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(18)">⟳</button><button class="v-btn" id="ar18" onclick="togAR(18)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Spherical & Monopole Gear</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Gear Design</span><span class="proj-pill">Mechanisms</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v19" data-glb="models/Balogun Filling station.glb" data-loader="l19">
+        <div class="v-placeholder" onclick="initViewer(19)"><div class="v-placeholder-icon">⬟</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l19" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(19)">⟳</button><button class="v-btn" id="ar19" onclick="togAR(19)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Balogun Filling Station</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Architecture</span><span class="proj-pill">Infrastructure</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v20" data-glb="models/Chicken leg.glb" data-loader="l20">
+        <div class="v-placeholder" onclick="initViewer(20)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l20" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(20)">⟳</button><button class="v-btn" id="ar20" onclick="togAR(20)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Chicken Leg Mechanism</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Legged Mechanism</span><span class="proj-pill">Biomimicry</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v21" data-glb="models/Fruit harvester.glb" data-loader="l21">
+        <div class="v-placeholder" onclick="initViewer(21)"><div class="v-placeholder-icon">⚙</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l21" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(21)">⟳</button><button class="v-btn" id="ar21" onclick="togAR(21)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Fruit Harvester</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Agricultural</span><span class="proj-pill">Automation</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v22" data-glb="models/Designathon 2.0.glb" data-loader="l22">
+        <div class="v-placeholder" onclick="initViewer(22)"><div class="v-placeholder-icon">⬡</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l22" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(22)">⟳</button><button class="v-btn" id="ar22" onclick="togAR(22)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Designathon 2.0</div>
+        <div class="proj-pills"><span class="proj-pill">Fusion 360</span><span class="proj-pill">Competition</span><span class="proj-pill">Autodesk</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v23" data-glb="models/MCE 412 Group 4.glb" data-loader="l23">
+        <div class="v-placeholder" onclick="initViewer(23)"><div class="v-placeholder-icon">⬟</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l23" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(23)">⟳</button><button class="v-btn" id="ar23" onclick="togAR(23)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">MCE 412 Group Project</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Academic</span><span class="proj-pill">Group Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v24" data-glb="models/Keke.glb" data-loader="l24">
+        <div class="v-placeholder" onclick="initViewer(24)"><div class="v-placeholder-icon">⬟</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l24" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(24)">⟳</button><button class="v-btn" id="ar24" onclick="togAR(24)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">Keke (Tricycle)</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Transport</span><span class="proj-pill">Vehicle Design</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v25" data-glb="models/CUP.glb" data-loader="l25">
+        <div class="v-placeholder" onclick="initViewer(25)"><div class="v-placeholder-icon">◉</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l25" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(25)">⟳</button><button class="v-btn" id="ar25" onclick="togAR(25)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">CUP</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Product Design</span><span class="proj-pill">Consumer</span></div>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-viewer" id="v26" data-glb="models/SPOT.glb" data-loader="l26">
+        <div class="v-placeholder" onclick="initViewer(26)"><div class="v-placeholder-icon">◈</div><span>Click to Load 3D</span></div>
+        <div class="v-loader" id="l26" style="display:none"><div class="spinner"></div><span>Loading Model</span></div>
+        <div class="v-top" style="display:none"><span class="v-badge">3D · Interactive</span><span class="v-hint">Drag · Scroll · Orbit</span></div>
+        <div class="v-btns" style="display:none"><button class="v-btn" onclick="resetV(26)">⟳</button><button class="v-btn" id="ar26" onclick="togAR(26)">▶</button></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-name">SPOT Robot</div>
+        <div class="proj-pills"><span class="proj-pill">SolidWorks</span><span class="proj-pill">Quadruped</span><span class="proj-pill">Boston Dynamics</span></div>
       </div>
     </div>
 
@@ -729,44 +747,31 @@ const ro=new IntersectionObserver(entries=>entries.forEach((e,i)=>{
 }),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-/* ── GLB LOADER (Three.js GLTFLoader inline) ── */
-// Minimal GLTFLoader shim using fetch + binary parse via THREE.ObjectLoader fallback
-// We'll use the proper GLTFLoader from CDN via dynamic script injection
-
+/* ── GLTF LOADER ── */
+let gltfReady=false;
+const gltfCallbacks=[];
 function loadGLTFLoader(cb){
-  // GLTFLoader is not in the base r128 build — we implement a lightweight fetch+parse
-  // using THREE's built-in support for gltf via a script tag
+  if(gltfReady){cb();return;}
+  gltfCallbacks.push(cb);
+  if(gltfCallbacks.length>1)return; // already loading
   const s=document.createElement('script');
   s.src='https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';
-  s.onload=cb;
-  s.onerror=()=>{console.warn('GLTFLoader CDN failed');cb(null);};
+  s.onload=()=>{gltfReady=true;gltfCallbacks.forEach(fn=>fn());};
+  s.onerror=()=>console.error('GLTFLoader failed');
   document.head.appendChild(s);
 }
 
-/* ── ORBIT CONTROLS ── */
+/* ── ORBIT ── */
 function mkOrbit(cam,el){
   let dn=false,lx=0,ly=0,θ=.4,φ=1.2,r=5,tθ=.4,tφ=1.2,tr=5,auto=false;
-  const upd=()=>{
-    cam.position.set(r*Math.sin(φ)*Math.sin(θ),r*Math.cos(φ),r*Math.sin(φ)*Math.cos(θ));
-    cam.lookAt(0,0,0);
-  };
+  const upd=()=>{cam.position.set(r*Math.sin(φ)*Math.sin(θ),r*Math.cos(φ),r*Math.sin(φ)*Math.cos(θ));cam.lookAt(0,0,0);};
   el.addEventListener('mousedown',e=>{dn=true;lx=e.clientX;ly=e.clientY;auto=false;});
   window.addEventListener('mouseup',()=>dn=false);
-  el.addEventListener('mousemove',e=>{
-    if(!dn)return;
-    tθ-=(e.clientX-lx)*.009;
-    tφ=Math.max(.25,Math.min(Math.PI-.25,tφ+(e.clientY-ly)*.009));
-    lx=e.clientX;ly=e.clientY;
-  });
+  el.addEventListener('mousemove',e=>{if(!dn)return;tθ-=(e.clientX-lx)*.009;tφ=Math.max(.25,Math.min(Math.PI-.25,tφ+(e.clientY-ly)*.009));lx=e.clientX;ly=e.clientY;});
   el.addEventListener('wheel',e=>{e.preventDefault();tr=Math.max(1.5,Math.min(20,tr+e.deltaY*.012));},{passive:false});
   let lt=0,lt2=0;
   el.addEventListener('touchstart',e=>{lt=e.touches[0].clientX;lt2=e.touches[0].clientY;auto=false;});
-  el.addEventListener('touchmove',e=>{
-    e.preventDefault();
-    tθ-=(e.touches[0].clientX-lt)*.012;
-    tφ=Math.max(.25,Math.min(Math.PI-.25,tφ+(e.touches[0].clientY-lt2)*.012));
-    lt=e.touches[0].clientX;lt2=e.touches[0].clientY;
-  },{passive:false});
+  el.addEventListener('touchmove',e=>{e.preventDefault();tθ-=(e.touches[0].clientX-lt)*.012;tφ=Math.max(.25,Math.min(Math.PI-.25,tφ+(e.touches[0].clientY-lt2)*.012));lt=e.touches[0].clientX;lt2=e.touches[0].clientY;},{passive:false});
   return{
     tick(){if(auto)tθ+=.004;θ+=(tθ-θ)*.08;φ+=(tφ-φ)*.08;r+=(tr-r)*.08;upd();},
     reset(){tθ=.4;tφ=1.2;tr=5;},
@@ -774,109 +779,101 @@ function mkOrbit(cam,el){
   };
 }
 
-/* ── SCENE FACTORY ── */
-function mkScene(containerId, glbPath, loaderId){
+/* ── SCENE REGISTRY — visibility-based render pausing ── */
+const scenes={}; // id -> {rndr, sc, cam, orb, visible}
+
+/* IntersectionObserver pauses render when card scrolls out of view */
+const visObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    const id=e.target.dataset.sceneId;
+    if(id && scenes[id]) scenes[id].visible=e.isIntersecting;
+  });
+},{threshold:0.05});
+
+/* Single shared render loop — only draws visible scenes */
+(function masterLoop(){
+  requestAnimationFrame(masterLoop);
+  for(const id in scenes){
+    const s=scenes[id];
+    if(!s.visible)continue;
+    s.orb.tick();
+    s.rndr.render(s.sc,s.cam);
+  }
+})();
+
+function mkScene(containerId,glbPath,loaderId){
   const wrap=document.getElementById(containerId);
   if(!wrap)return null;
 
-  const rndr=new THREE.WebGLRenderer({antialias:true,alpha:false});
-  rndr.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  rndr.shadowMap.enabled=true;
-  rndr.shadowMap.type=THREE.PCFSoftShadowMap;
+  const rndr=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'low-power'});
+  rndr.setPixelRatio(1); // always 1:1 for project cards — big perf win
+  rndr.shadowMap.enabled=false; // disable shadows on cards for perf
   rndr.toneMapping=THREE.ACESFilmicToneMapping;
   rndr.toneMappingExposure=1.2;
   rndr.setClearColor(0x060c18);
-  wrap.insertBefore(rndr.domElement,wrap.firstChild);
+  wrap.appendChild(rndr.domElement);
 
   const sc=new THREE.Scene();
   const cam=new THREE.PerspectiveCamera(42,1,.01,1000);
-
-  // Lights
-  sc.add(new THREE.AmbientLight(0x8090b0,1.8));
-  const key=new THREE.DirectionalLight(0xfff4e0,3.5);
-  key.position.set(4,6,4);key.castShadow=true;
-  key.shadow.mapSize.set(1024,1024);sc.add(key);
-  const fill=new THREE.DirectionalLight(0x2040a0,1.2);
-  fill.position.set(-4,2,-3);sc.add(fill);
-  const rim=new THREE.DirectionalLight(0xc9a84c,.9);
-  rim.position.set(0,-2,-4);sc.add(rim);
-
-  const grid=new THREE.GridHelper(10,14,0x1a2540,0x0f1a2e);
-  grid.position.y=-1.1;sc.add(grid);
+  sc.add(new THREE.AmbientLight(0x8090b0,2.5));
+  const key=new THREE.DirectionalLight(0xfff4e0,4);key.position.set(4,6,4);sc.add(key);
+  const fill=new THREE.DirectionalLight(0x2040a0,1.4);fill.position.set(-4,2,-3);sc.add(fill);
+  const rim=new THREE.DirectionalLight(0xc9a84c,1);rim.position.set(0,-2,-4);sc.add(rim);
+  const grid=new THREE.GridHelper(10,14,0x1a2540,0x0f1a2e);grid.position.y=-1.1;sc.add(grid);
 
   const orb=mkOrbit(cam,rndr.domElement);
-
-  const rsz=()=>{
-    const w=wrap.clientWidth,h=wrap.clientHeight;
-    rndr.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
-  };
+  const rsz=()=>{const w=wrap.clientWidth,h=wrap.clientHeight;if(w&&h){rndr.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}};
   rsz();new ResizeObserver(rsz).observe(wrap);
 
-  // Load GLB
-  if(window.THREE && window.THREE.GLTFLoader){
-    const loader=new THREE.GLTFLoader();
-    loader.load(
-      glbPath,
-      gltf=>{
-        const model=gltf.scene;
-        // Auto-center and scale
-        const box=new THREE.Box3().setFromObject(model);
-        const size=box.getSize(new THREE.Vector3());
-        const center=box.getCenter(new THREE.Vector3());
-        const maxDim=Math.max(size.x,size.y,size.z);
-        const scale=2.5/maxDim;
-        model.scale.setScalar(scale);
-        model.position.sub(center.multiplyScalar(scale));
-        // Enhance materials
-        model.traverse(n=>{
-          if(n.isMesh){
-            n.castShadow=true;n.receiveShadow=true;
-            if(n.material){
-              n.material.envMapIntensity=0.6;
-              if(n.material.metalness!==undefined)n.material.metalness=Math.max(n.material.metalness,.3);
-            }
-          }
-        });
-        sc.add(model);
-        // Hide loader
-        const ld=document.getElementById(loaderId);
-        if(ld)ld.classList.add('hide');
-        // Auto-fit camera
-        const newBox=new THREE.Box3().setFromObject(model);
-        const newSize=newBox.getSize(new THREE.Vector3());
-        const maxS=Math.max(newSize.x,newSize.y,newSize.z);
-        orb.reset();
-      },
-      xhr=>{
-        const ld=document.getElementById(loaderId);
-        if(ld){const p=xhr.total?Math.round(xhr.loaded/xhr.total*100):0;const sp=ld.querySelector('span');if(sp&&xhr.total)sp.textContent=p+'%';}
-      },
-      err=>{
-        console.error('GLB load error:',glbPath,err);
-        const ld=document.getElementById(loaderId);
-        if(ld){ld.classList.add('hide');}
-      }
-    );
-  }
+  // Register in master loop
+  const numId=containerId.replace('v','');
+  scenes[numId]={rndr,sc,cam,orb,visible:true};
+  wrap.dataset.sceneId=numId;
+  visObs.observe(wrap);
 
-  (function loop(){requestAnimationFrame(loop);orb.tick();rndr.render(sc,cam);})();
+  new THREE.GLTFLoader().load(glbPath,gltf=>{
+    const model=gltf.scene;
+    const box=new THREE.Box3().setFromObject(model);
+    const center=box.getCenter(new THREE.Vector3());
+    const maxDim=Math.max(...box.getSize(new THREE.Vector3()).toArray());
+    const scale=2.5/maxDim;
+    model.scale.setScalar(scale);
+    model.position.sub(center.multiplyScalar(scale));
+    model.traverse(n=>{if(n.isMesh&&n.material){n.material.envMapIntensity=0.5;if(n.material.metalness!==undefined)n.material.metalness=Math.max(n.material.metalness,.3);}});
+    sc.add(model);
+    const ld=document.getElementById(loaderId);
+    if(ld)ld.classList.add('hide');
+    wrap.querySelectorAll('.v-top,.v-btns').forEach(el=>el.style.display='');
+  },
+  xhr=>{
+    const ld=document.getElementById(loaderId);
+    if(ld&&xhr.total){const p=Math.round(xhr.loaded/xhr.total*100);const sp=ld.querySelector('span');if(sp)sp.textContent=p+'%';}
+  },
+  err=>{
+    console.error('GLB:',glbPath,err);
+    const ld=document.getElementById(loaderId);
+    if(ld){const sp=ld.querySelector('span');if(sp)sp.textContent='Load Failed';const spin=ld.querySelector('.spinner');if(spin)spin.style.display='none';}
+  });
+
   return orb;
 }
 
-/* ── INIT ── */
+/* ── LAZY INIT ── */
+const initialized={};
 const orbits={};
 
-loadGLTFLoader(ok=>{
-  if(!ok && !window.THREE.GLTFLoader){
-    console.error('GLTFLoader not available');return;
-  }
-  orbits[1]=mkScene('v1','models/Tesla bot.glb','l1');
-  orbits[2]=mkScene('v2','models/UAV.glb','l2');
-  orbits[3]=mkScene('v3','models/Robotic sweeper.glb','l3');
-  orbits[4]=mkScene('v4','models/Hoverboard.glb','l4');
-  orbits[5]=mkScene('v5','models/Race Car chassis.glb','l5');
-  orbits[6]=mkScene('v6','models/Mouse circuit.glb','l6');
-});
+function initViewer(id){
+  if(initialized[id])return;
+  initialized[id]=true;
+  const wrap=document.getElementById('v'+id);
+  const ph=wrap.querySelector('.v-placeholder');
+  if(ph)ph.style.display='none';
+  const ld=document.getElementById('l'+id);
+  if(ld)ld.style.display='flex';
+  const glbPath=wrap.dataset.glb;
+  const loaderId='l'+id;
+  loadGLTFLoader(()=>{orbits[id]=mkScene('v'+id,glbPath,loaderId);});
+}
 
 function resetV(id){if(orbits[id])orbits[id].reset();}
 function togAR(id){
@@ -887,84 +884,69 @@ function togAR(id){
   }
 }
 
-/* ── HERO 3D (Tesla Bot GLB) ── */
+/* ── HERO 3D ── */
 (()=>{
   const canvas=document.getElementById('hero-canvas');
   const par=canvas.parentElement;
-  const rndr=new THREE.WebGLRenderer({canvas,antialias:true});
-  rndr.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  const rndr=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
+  rndr.setPixelRatio(Math.min(window.devicePixelRatio,1.5));
   rndr.shadowMap.enabled=true;
   rndr.toneMapping=THREE.ACESFilmicToneMapping;
   rndr.toneMappingExposure=1.25;
   rndr.setClearColor(0x060c18);
 
-  const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(42,1,.01,1000);
+  const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(36,1,.01,1000);
   sc.add(new THREE.AmbientLight(0x8090b0,2));
   const k=new THREE.DirectionalLight(0xfff4e0,4.5);k.position.set(4,7,5);k.castShadow=true;sc.add(k);
   const f=new THREE.DirectionalLight(0x2040a0,2);f.position.set(-4,2,-3);sc.add(f);
   const rim=new THREE.DirectionalLight(0xc9a84c,1.2);rim.position.set(0,-3,-4);sc.add(rim);
-  const grid=new THREE.GridHelper(10,16,0x1a2540,0x0f1a2e);grid.position.y=-1.4;sc.add(grid);
+  const grid=new THREE.GridHelper(14,18,0x1a2540,0x0f1a2e);grid.position.y=-1.8;sc.add(grid);
 
-  let heroModel=null;
-  let θ=.35,φ=1.15,r=6,tθ=.35,tφ=1.15,tr=6,dn=false,lx=0,ly=0,auto=true,T=0;
+  let heroModel=null,baseY=0,θ=.35,φ=1.25,r=5.5,tθ=.35,tφ=1.25,tr=5.5,dn=false,lx=0,ly=0,auto=true,T=0;
 
-  // Load Tesla Bot for hero
   function tryLoadHero(){
-    if(!window.THREE.GLTFLoader){setTimeout(tryLoadHero,200);return;}
-    const loader=new THREE.GLTFLoader();
-    loader.load('models/Tesla bot.glb',gltf=>{
+    if(!window.THREE||!window.THREE.GLTFLoader){setTimeout(tryLoadHero,200);return;}
+    new THREE.GLTFLoader().load('models/Tesla bot.glb',gltf=>{
       heroModel=gltf.scene;
       const box=new THREE.Box3().setFromObject(heroModel);
-      const size=box.getSize(new THREE.Vector3());
       const center=box.getCenter(new THREE.Vector3());
-      const maxDim=Math.max(size.x,size.y,size.z);
-      const scale=3.2/maxDim;
+      const maxDim=Math.max(...box.getSize(new THREE.Vector3()).toArray());
+      const scale=3.0/maxDim;
       heroModel.scale.setScalar(scale);
-      heroModel.position.sub(center.multiplyScalar(scale));
-      heroModel.traverse(n=>{
-        if(n.isMesh){n.castShadow=true;n.receiveShadow=true;}
-      });
+      heroModel.position.set(-center.x*scale,-center.y*scale,-center.z*scale);
+      baseY=-center.y*scale;
+      heroModel.traverse(n=>{if(n.isMesh){n.castShadow=true;n.receiveShadow=true;}});
       sc.add(heroModel);
-      document.querySelector('.canvas-tag').style.opacity='1';
     },null,err=>console.warn('Hero GLB:',err));
   }
-  tryLoadHero();
 
-  canvas.addEventListener('mousedown',e=>{dn=true;lx=e.clientX;ly=e.clientY;auto=false;
-    const dh=document.querySelector('.drag-hint');if(dh)dh.style.opacity='0';
-  });
+  loadGLTFLoader(()=>tryLoadHero());
+
+  canvas.addEventListener('mousedown',e=>{dn=true;lx=e.clientX;ly=e.clientY;auto=false;const dh=document.querySelector('.drag-hint');if(dh)dh.style.opacity='0';});
   window.addEventListener('mouseup',()=>dn=false);
-  canvas.addEventListener('mousemove',e=>{
-    if(!dn)return;
-    tθ-=(e.clientX-lx)*.009;
-    tφ=Math.max(.3,Math.min(2.5,tφ+(e.clientY-ly)*.009));
-    lx=e.clientX;ly=e.clientY;
-  });
-  canvas.addEventListener('wheel',e=>{e.preventDefault();tr=Math.max(2,Math.min(18,tr+e.deltaY*.013));},{passive:false});
+  canvas.addEventListener('mousemove',e=>{if(!dn)return;tθ-=(e.clientX-lx)*.009;tφ=Math.max(.3,Math.min(2.5,tφ+(e.clientY-ly)*.009));lx=e.clientX;ly=e.clientY;});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();tr=Math.max(2,Math.min(16,tr+e.deltaY*.012));},{passive:false});
   let lt=0,lt2=0;
   canvas.addEventListener('touchstart',e=>{lt=e.touches[0].clientX;lt2=e.touches[0].clientY;auto=false;});
-  canvas.addEventListener('touchmove',e=>{
-    e.preventDefault();
-    tθ-=(e.touches[0].clientX-lt)*.012;
-    tφ=Math.max(.3,Math.min(2.5,tφ+(e.touches[0].clientY-lt2)*.012));
-    lt=e.touches[0].clientX;lt2=e.touches[0].clientY;
-  },{passive:false});
+  canvas.addEventListener('touchmove',e=>{e.preventDefault();tθ-=(e.touches[0].clientX-lt)*.012;tφ=Math.max(.3,Math.min(2.5,tφ+(e.touches[0].clientY-lt2)*.012));lt=e.touches[0].clientX;lt2=e.touches[0].clientY;},{passive:false});
 
-  const rsz=()=>{const w=par.clientWidth,h=par.clientHeight;rndr.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();};
+  const rsz=()=>{const w=par.clientWidth,h=par.clientHeight;if(w&&h){rndr.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}};
   rsz();new ResizeObserver(rsz).observe(par);
+
+  let heroVisible=true;
+  new IntersectionObserver(e=>{heroVisible=e[0].isIntersecting;},{threshold:0.05}).observe(par);
 
   (function loop(){
     requestAnimationFrame(loop);
+    if(!heroVisible)return;
     T+=.008;if(auto)tθ+=.005;
     θ+=(tθ-θ)*.07;φ+=(tφ-φ)*.07;r+=(tr-r)*.07;
     cam.position.set(r*Math.sin(φ)*Math.sin(θ),r*Math.cos(φ),r*Math.sin(φ)*Math.cos(θ));
     cam.lookAt(0,0,0);
-    if(heroModel)heroModel.position.y=Math.sin(T)*.05;
+    if(heroModel)heroModel.position.y=baseY+Math.sin(T)*.06;
     rndr.render(sc,cam);
   })();
 })();
 </script>
 </body>
-
 </html>
-
