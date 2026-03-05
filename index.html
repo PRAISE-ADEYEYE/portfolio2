@@ -737,7 +737,7 @@ function loadGLTFLoader(cb){
   // GLTFLoader is not in the base r128 build — we implement a lightweight fetch+parse
   // using THREE's built-in support for gltf via a script tag
   const s=document.createElement('script');
-  s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js';
+  s.src='https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';
   s.onload=cb;
   s.onerror=()=>{console.warn('GLTFLoader CDN failed');cb(null);};
   document.head.appendChild(s);
@@ -967,3 +967,4 @@ function togAR(id){
 </body>
 
 </html>
+
